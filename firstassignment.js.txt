@@ -1,0 +1,22 @@
+
+aritGeo: function aritGeo(myArray) {
+  var arith_diff = myArray[1] - myArray[0];
+  var geo_ratio = myArray[1]/myArray[0];
+  for(var i=0;i<myArray.length-1;i++) {
+
+    if (myArray.length === 0) {
+       return '0';
+    }
+    if ((myArray[i+1]-myArray[i])!== arith_diff) { 
+      return false;
+      } else {return 'Arithmetic'};
+    if ((myArray[i+1]/myArray[i]) !== geo_ratio) {
+        return false;
+    }
+    else {return 'Geometric'};
+    if ((myArray.length !== 0) && ((myArray[i+1]-myArray[i])!== arith_diff) && ((myArray[i+1]/myArray[i]) !== geo_ratio) {
+        return '-1';}
+  }
+}  
+
+
